@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In-SEC - Sécurité Industrielle en Haïti</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header -->
+    <header class="bg-blue-900 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="logo-in-sec.png" alt="Logo In-SEC" class="h-12">
+                <h1 class="text-2xl font-bold">In-SEC</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#accueil" class="hover:text-blue-300 transition">Accueil</a>
+                <a href="#services" class="hover:text-blue-300 transition">Services</a>
+                <a href="#apropos" class="hover:text-blue-300 transition">À propos</a>
+                <a href="#contact" class="hover:text-blue-300 transition">Contact</a>
+            </nav>
+            <button class="md:hidden text-white focus:outline-none" id="menuBtn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-blue-800 py-2 px-4" id="mobileMenu">
+            <a href="#accueil" class="block py-2 hover:text-blue-300 transition">Accueil</a>
+            <a href="#services" class="block py-2 hover:text-blue-300 transition">Services</a>
+            <a href="#apropos" class="block py-2 hover:text-blue-300 transition">À propos</a>
+            <a href="#contact" class="block py-2 hover:text-blue-300 transition">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero text-white py-20 md:py-32 flex items-center">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">INDUSTRIAL SECURITY <br>EXPERTS & CONSULTANTS</h1>
+            <p class="text-xl md:text-2xl mb-8">Experts en sécurité industrielle depuis 2014</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300">Nous contacter</a>
+                <a href="#services" class="bg-white hover:bg-gray-200 text-blue-900 px-8 py-3 rounded-lg font-semibold transition duration-300">Nos services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Nos Services Professionnels</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300 border-t-4 border-blue-600">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-users text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Recrutement en Ressource Humaine</h3>
+                    <p class="text-gray-600">Nous vous aidons à trouver les meilleurs talents pour votre entreprise avec notre expertise en recrutement spécialisé.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300 border-t-4 border-blue-600">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-clipboard-check text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Audit de Conformité Sociale et Environnementale</h3>
+                    <p class="text-gray-600">Évaluation complète de votre conformité aux normes sociales et environnementales pour une entreprise responsable.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300 border-t-4 border-blue-600">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-fire-extinguisher text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Recharge et Inspection d'Extincteurs</h3>
+                    <p class="text-gray-600">Service professionnel d'inspection, maintenance et recharge d'extincteurs pour assurer votre sécurité incendie.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300 border-t-4 border-blue-600">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-first-aid text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Formation de Premier Secours</h3>
+                    <p class="text-gray-600">Formations pratiques et certifiantes en premiers secours pour préparer votre personnel aux situations d'urgence.</p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300 border-t-4 border-blue-600">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-flask text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Formation sur les Produits Chimiques</h3>
+                    <p class="text-gray-600">Gestion des produits chimiques dangereux, fiches de données de sécurité, inventaire et procédures de déversement.</p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300 border-t-4 border-blue-600">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-people-carry text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Simulacre d'Évacuation</h3>
+                    <p class="text-gray-600">Organisation et formation pour des exercices d'évacuation réalistes afin de préparer votre équipe aux situations d'urgence.</p>
+                </div>
+                
+                <!-- Service 7 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300 border-t-4 border-blue-600">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-user-shield text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Formation C-TPAT</h3>
+                    <p class="text-gray-600">Bonnes pratiques de gestion pour la zone C-TPAT (Customs-Trade Partnership Against Terrorism) et sécurité de la chaîne d'approvisionnement.</p>
+                </div>
+
+                <!-- Service 8 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300 border-t-4 border-blue-600">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-hard-hat text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Vente d'Équipement de Sécurité Industrielle</h3>
+                    <p class="text-gray-600">Fourniture de matériel de sécurité de qualité : casques, gants, lunettes, chaussures de sécurité et autres équipements de protection individuelle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="in-sec-team.jpg" alt="In-SEC Team" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-6">À propos de In-SEC</h2>
+                    <p class="text-gray-700 mb-4">Fondée en 2014, In-SEC (Industrial Security Experts & Consultants) est une filiale de QCMTEC spécialisée dans les services de sécurité industrielle en Haïti.</p>
+                    <p class="text-gray-700 mb-6">Notre mission est de fournir des solutions complètes de conformité, de gestion et de formation technique pour aider les entreprises à maintenir des environnements de travail sûrs et conformes aux normes internationales.</p>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Notre Vision</h3>
+                        <p class="text-gray-700">Devenir le leader en Haïti dans les services de conformité et de sécurité industrielle, en offrant des solutions innovantes et sur mesure à nos clients.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Nos Valeurs</h3>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                            <li>Intégrité et éthique professionnelle</li>
+                            <li>Excellence dans le service</li>
+                            <li>Innovation continue</li>
+                            <li>Engagement envers la sécurité</li>
+                            <li>Responsabilité sociale et environnementale</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-blue-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-4xl md:text-5xl font-bold mb-2" id="yearsCounter">0</div>
+                    <div class="text-lg">Années d'expérience</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl md:text-5xl font-bold mb-2" id="clientsCounter">0</div>
+                    <div class="text-lg">Clients satisfaits</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl md:text-5xl font-bold mb-2" id="trainingsCounter">0</div>
+                    <div class="text-lg">Formations réalisées</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl md:text-5xl font-bold mb-2" id="servicesCounter">0</div>
+                    <div class="text-lg">Services offerts</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Contactez-nous</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-2xl font-bold text-blue-800 mb-6">Informations de contact</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mr-4 mt-1">
+                                    <i class="fas fa-phone-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">Téléphone</h4>
+                                    <p class="text-gray-700">(509) 4188-8373</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mr-4 mt-1">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">Email</h4>
+                                    <p class="text-gray-700">contact.in-sec@protonmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">Adresse</h4>
+                                    <p class="text-gray-700">Port-au-Prince, Haïti</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mr-4 mt-1">
+                                    <i class="fas fa-clock text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">Heures d'ouverture</h4>
+                                    <p class="text-gray-700">Lundi - Vendredi: 8:00 - 17:00</p>
+                                    <p class="text-gray-700">Samedi: 8:00 - 13:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-blue-800 mb-6">Envoyez-nous un message</h3>
+                        <form id="contactForm" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-1">Nom complet</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-1">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-1">Téléphone</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            
+                            <div>
+                                <label for="service" class="block text-gray-700 font-medium mb-1">Service intéressé</label>
+                                <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <option value="">Sélectionnez un service</option>
+                                    <option value="recrutement">Recrutement en Ressource Humaine</option>
+                                    <option value="audit">Audit de Conformité</option>
+                                    <option value="extincteurs">Recharge d'Extincteurs</option>
+                                    <option value="secours">Premier Secours</option>
+                                    <option value="chimiques">Produits Chimiques</option>
+                                    <option value="evacuation">Simulacre d'Évacuation</option>
+                                    <option value="ctpat">Formation C-TPAT</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-gray-700 font-medium mb-1">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition duration-300 w-full">
+                                Envoyer le message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Témoignages</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"In-SEC a transformé notre approche de la sécurité industrielle. Leurs formations sont exceptionnelles et leurs audits très complets."</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 text-blue-800 rounded-full w-10 h-10 flex items-center justify-center font-bold mr-3">JD</div>
+                        <div>
+                            <h4 class="font-semibold">Jean D.</h4>
+                            <p class="text-gray-500 text-sm">Directeur d'Usine</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Le service de recharge d'extincteurs est très professionnel. Nous avons également apprécié leur formation en produits chimiques."</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 text-blue-800 rounded-full w-10 h-10 flex items-center justify-center font-bold mr-3">MR</div>
+                        <div>
+                            <h4 class="font-semibold">Marie R.</h4>
+                            <p class="text-gray-500 text-sm">Responsable QHSE</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Le simulacre d'évacuation organisé par In-SEC a été très réaliste et instructif. Notre personnel est maintenant bien préparé."</p>
+                    <div class="flex items-center">
+                        <div class="bg-blue-100 text-blue-800 rounded-full w-10 h-10 flex items-center justify-center font-bold mr-3">PL</div>
+                        <div>
+                            <h4 class="font-semibold">Pierre L.</h4>
+                            <p class="text-gray-500 text-sm">Directeur des Opérations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-12 bg-blue-800 text-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6">Prêt à améliorer la sécurité de votre entreprise?</h2>
+            <p class="text-xl mb-8">Contactez-nous dès aujourd'hui pour une consultation gratuite.</p>
+            <a href="#contact" class="bg-white hover:bg-gray-200 text-blue-900 px-8 py-3 rounded-lg font-semibold transition duration-300 inline-block">
+                Demander un devis
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="bg-white text-blue-900 p-2 rounded-full">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">In-SEC</h3>
+                    </div>
+                    <p class="text-gray-400">Experts en sécurité industrielle depuis 2014. Nous fournissons des solutions complètes de sécurité industrielle et de conformité.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Recrutement RH</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Audit de Conformité</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Extincteurs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Premier Secours</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Produits Chimiques</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Liens Utiles</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#accueil" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#apropos" class="text-gray-400 hover:text-white transition">À propos</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i> (509) 4188-8373
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> contact@in-sec.com
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i> Port-au-Prince, Haïti
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 In-SEC. Tous droits réservés.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-8 rounded-lg shadow-xl max-w-md w-full mx-4 text-center">
+            <div class="text-green-500 text-5xl mb-4">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Message envoyé!</h3>
+            <p class="text-gray-600 mb-6">Nous avons bien reçu votre message et nous vous contacterons dans les plus brefs délais.</p>
+            <button id="closeModal" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition duration-300">
+                Fermer
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Counter Animation
+        function animateCounter(elementId, target, duration = 2000) {
+            const element = document.getElementById(elementId);
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    clearInterval(timer);
+                    current = target;
+                }
+                element.textContent = Math.floor(current);
+            }, 16);
+        }
+        
+        // Start counters when stats section is in view
+        const statsSection = document.querySelector('section.bg-blue-900');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter('yearsCounter', new Date().getFullYear() - 2014);
+                    animateCounter('clientsCounter', 150);
+                    animateCounter('trainingsCounter', 320);
+                    animateCounter('servicesCounter', 8);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(statsSection);
+        
+        // Contact Form Submission
+        const contactForm = document.getElementById('contactForm');
+        const successModal = document.getElementById('successModal');
+        const closeModal = document.getElementById('closeModal');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Here you would normally send the form data to a server
+            // For this example, we'll just show the success modal
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Show success modal
+            successModal.classList.remove('hidden');
+        });
+        
+        closeModal.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+        });
+        
+        // Close modal when clicking outside
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
